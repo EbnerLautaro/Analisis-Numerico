@@ -1,0 +1,530 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\bottommargin 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nto}{n\to\infty}
+{n\to\infty}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Repaso Analisis
+\end_layout
+
+\begin_layout Section
+Series
+\end_layout
+
+\begin_layout Subsection
+Serie Geometrica
+\end_layout
+
+\begin_layout Standard
+La serie geometrica,
+ dada por
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}ar^{n-1}=a+ar+ar²+\dots
+\]
+
+\end_inset
+
+es convergente si 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+ y su suma es 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}ar^{n-1}=\frac{a}{1-r}
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $|r|\ge1$
+\end_inset
+
+,
+ la serie es divergente
+\end_layout
+
+\begin_layout Subsection
+Serie Armonica
+\end_layout
+
+\begin_layout Standard
+La serie armonica,
+ dada por
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\dots
+\]
+
+\end_inset
+
+es divergente.
+\end_layout
+
+\begin_layout Subsection
+Teorema de divergencia convergencia
+\end_layout
+
+\begin_layout Itemize
+Si la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+convergente
+\series default
+,
+ entonces 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}\neq0$
+\end_inset
+
+ o no existe,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+divergente
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Serie 
+\begin_inset Formula $\boldsymbol{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La serie 
+\begin_inset Formula $p$
+\end_inset
+
+,
+ dada por
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n^{p}}
+\]
+
+\end_inset
+
+es 
+\series bold
+convergente
+\series default
+ si 
+\begin_inset Formula $p>1$
+\end_inset
+
+ y 
+\series bold
+divergente
+\series default
+ si 
+\begin_inset Formula $p\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Prueba por comparacion
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ son series con terminos positivos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ es 
+\series bold
+convergente
+\series default
+ y 
+\begin_inset Formula $a_{n}\le b_{n}$
+\end_inset
+
+ para toda 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ tambien es 
+\series bold
+convergente
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ es 
+\series bold
+divergente
+\series default
+ y 
+\begin_inset Formula $a_{n}\ge b_{n}$
+\end_inset
+
+ para toda 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ tambien es 
+\series bold
+divergente.
+\end_layout
+
+\begin_layout Subsection
+Prueba por comparacion del limite
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ son series con terminos positivos.
+ Si
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{a_{n}}{b_{n}}=c
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $c$
+\end_inset
+
+ es un numero finito y 
+\begin_inset Formula $c>0$
+\end_inset
+
+,
+ entonces ambas series 
+\series bold
+convergen
+\series default
+ o ambas 
+\series bold
+divergen.
+\end_layout
+
+\begin_layout Subsection
+Series alternantes
+\end_layout
+
+\begin_layout Standard
+Si la serie alternante dada por 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}(-1)^{n-1}b_{n}
+\]
+
+\end_inset
+
+cumple con 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b_{n+1}\le b_{n}$
+\end_inset
+
+ para toda 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lim_{n\to\infty}b_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+entonces la serie es 
+\series bold
+convergente
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Prueba de la razon
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=L<1$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+absolutamente convergente
+\series default
+ (y,
+ por lo tanto,
+ 
+\series bold
+convergente
+\series default
+).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=L>1$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=\infty$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+divergente
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=1$
+\end_inset
+
+,
+ la prueba de la razon 
+\series bold
+no es concluyente
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Prueba de la raiz
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}\sqrt[n]{a_{n}}=L<1$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+absolutamente convergente
+\series default
+ (y,
+ por lo tanto,
+ 
+\series bold
+convergente
+\series default
+).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}\sqrt[n]{a_{n}}=L>1$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=\infty$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+divergente
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}\sqrt[n]{a_{n}}=1$
+\end_inset
+
+,
+ la prueba de la raiz 
+\series bold
+no es concluyente
+\series default
+.
+\end_layout
+
+\end_body
+\end_document
