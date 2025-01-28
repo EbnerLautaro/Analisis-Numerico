@@ -66,6 +66,10 @@ theorems-ams
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 1cm
+\topmargin 1cm
+\bottommargin 1cm
+\footskip 1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -91,6 +95,39 @@ theorems-ams
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nto}{n\to\infty}
+{n\to\infty}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\b}[1]{\bar{#1}}
+{\bar{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\t}[1]{\tilde{#1}}
+{\tilde{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\h}[1]{\hat{#1}}
+{\hat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{\mathds{N}}
+{\mathds{N}}
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 Repaso Analisis
 \end_layout
@@ -104,7 +141,8 @@ Serie Geometrica
 \end_layout
 
 \begin_layout Standard
-La serie geometrica 
+La serie geometrica,
+ dada por
 \begin_inset Formula 
 \[
 \sum_{n=1}^{\infty}ar^{n-1}=a+ar+ar²+\dots
@@ -137,7 +175,8 @@ Serie Armonica
 \end_layout
 
 \begin_layout Standard
-La serie 
+La serie armonica,
+ dada por
 \begin_inset Formula 
 \[
 \sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\dots
@@ -199,7 +238,8 @@ La serie
 \begin_inset Formula $p$
 \end_inset
 
- 
+,
+ dada por
 \begin_inset Formula 
 \[
 \sum_{n=1}^{\infty}\frac{1}{n^{p}}
@@ -381,8 +421,849 @@ convergente
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Prueba de la razon
+\end_layout
 
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=L<1$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+absolutamente convergente
+\series default
+ (y,
+ por lo tanto,
+ 
+\series bold
+convergente
+\series default
+).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=L>1$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=\infty$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+divergente
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=1$
+\end_inset
+
+,
+ la prueba de la razon 
+\series bold
+no es concluyente
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Prueba de la raiz
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}\sqrt[n]{a_{n}}=L<1$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+absoluta
+\series default
+Sea
+\series bold
+mente convergente
+\series default
+ (y,
+ por lo tanto,
+ 
+\series bold
+convergente
+\series default
+).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}\sqrt[n]{a_{n}}=L>1$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\lim_{\nto}|\frac{a_{n+1}}{a_{n}}|=\infty$
+\end_inset
+
+,
+ entonces la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}$
+\end_inset
+
+ es 
+\series bold
+divergente
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{\nto}\sqrt[n]{a_{n}}=1$
+\end_inset
+
+,
+ la prueba de la raiz 
+\series bold
+no es concluyente
+\series default
+.
+\end_layout
+
+\begin_layout Part
+Serie de Taylor
+\end_layout
+
+\begin_layout Section
+Serie de Taylor en terminos de 
+\begin_inset Formula $(x-c)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si la funcion de 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene derivadas continuas de ordenes 
+\begin_inset Formula $0,1,2,...,(n+1)$
+\end_inset
+
+ en un intervalo cerrado 
+\begin_inset Formula $I=[a,b]$
+\end_inset
+
+,
+ entonces para cualquier 
+\begin_inset Formula $c$
+\end_inset
+
+ y 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $I$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(x)=\sum_{k=0}^{n}\frac{f^{(k)}(c)(x-c)^{k}}{k!}+E_{(n+1)}
+\]
+
+\end_inset
+
+Donde 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+E_{(n+1)}
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ es el error y esta dado de la forma 
+\begin_inset Formula 
+\[
+E_{(n+1)}=\frac{f^{(n+1)}(\epsilon)(x-c)^{(n+1)}}{(n+1)!}
+\]
+
+\end_inset
+
+Aqui 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ es un punto que se encuentra entre 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Serie de Taylor en terminos de 
+\begin_inset Formula $(x+h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta forma se obtiene de reemplazar 
+\begin_inset Formula $x$
+\end_inset
+
+ por 
+\begin_inset Formula $x+h$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+ por 
+\begin_inset Formula $x$
+\end_inset
+
+ en la formula anterior,
+ entonces tenemos
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+f(x) & = & \sum_{k=0}^{n}\frac{f^{(k)}(x)((x+h)-x)^{k}}{k!}+E_{(n+1)}\\
+ & = & \sum_{k=0}^{n}\frac{f^{(k)}(x)(h)^{k}}{k!}+E_{(n+1)}
+\end{array}
+\]
+
+\end_inset
+
+Donde 
+\begin_inset Formula $E_{(n+1)}$
+\end_inset
+
+ esta dato entonces por 
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+E_{(n+1)} & = & \frac{f^{(n+1)}(\epsilon)((x+h)-x)^{(n+1)}}{(n+1)!}\\
+ & = & \frac{f^{(n+1)}(\epsilon)(h)^{(n+1)}}{(n+1)!}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Erorres
+\end_layout
+
+\begin_layout Section
+Errores absolutos y relativos
+\end_layout
+
+\begin_layout Standard
+Cuando un numero real 
+\begin_inset Formula $r$
+\end_inset
+
+ es aproximado por otro 
+\begin_inset Formula $\bar{r}$
+\end_inset
+
+ se define el error por 
+\begin_inset Formula $r-\bar{r}$
+\end_inset
+
+.
+ Definimos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Simbolo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Expresion
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Error Absoluto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $|r-\bar{r}$
+\end_inset
+
+|
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Error Relativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{|r-\b r|}{|r|}=\frac{\Delta r}{r}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Error Porcentual 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $100\cdot\delta r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Redondeo y truncado
+\end_layout
+
+\begin_layout Description
+Redondeo Sea 
+\begin_inset Formula $\tilde{r}$
+\end_inset
+
+ la aproximacion por redondeo a 
+\begin_inset Formula $n$
+\end_inset
+
+ digitos decimales de 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Se sigue que 
+\begin_inset Formula 
+\[
+|r-\t r|\leq\frac{1}{2}10^{-n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Truncado Sea 
+\begin_inset Formula $\h r$
+\end_inset
+
+ la aproximacion por truncado a 
+\begin_inset Formula $n$
+\end_inset
+
+ digitos decimales de 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Se sigue que 
+\begin_inset Formula 
+\[
+|r-\h r|\le10^{-n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Digitos significativos
+\end_layout
+
+\begin_layout Standard
+Diremos que el numero 
+\begin_inset Formula $\b r$
+\end_inset
+
+ aproxima al numero 
+\begin_inset Formula $r$
+\end_inset
+
+ con 
+\begin_inset Formula $m$
+\end_inset
+
+ digitos significativos si 
+\begin_inset Formula 
+\[
+\delta r=\frac{\Delta r}{|r|}\le5\cdot10^{-m}=\frac{1}{2}10^{1-m}
+\]
+
+\end_inset
+
+Esto dice que el error relativo es del orden de 
+\begin_inset Formula $10^{-m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Errores en las operaciones
+\end_layout
+
+\begin_layout Subsection
+Error en la suma y resta
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $y=x_{1}+x_{2},\b y=\b{x_{1}}+\b{x_{2}}$
+\end_inset
+
+.
+ Podemos ver lo siguiente:
+\end_layout
+
+\begin_layout Standard
+El error por la suma esta dado por 
+\begin_inset Formula 
+\[
+y-\b y=(x_{1}+\b{x_{1}})+(x_{2}-\b{x_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El error absoluto 
+\begin_inset Formula 
+\[
+\Delta y\leq\Delta x_{1}+\Delta x_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El error relativo
+\begin_inset Formula 
+\[
+\delta y=\frac{\Delta y}{|y|}\leq\frac{\Delta x_{1}+\Delta x_{2}}{|x_{1}+x_{2}|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En general si 
+\begin_inset Formula $y=\sum_{i=1}^{n}x_{i}$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\Delta y\leq\sum_{i=1}^{n}\Delta x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Error de la multiplicacion y la divicion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $y=x_{1}*x_{2},\b y=\b{x_{1}}*\b{x_{2}},z=x_{1}/x_{2},\b z=\b{x_{1}}/\b{x_{2}}$
+\end_inset
+
+.
+ Se puede decir
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+\Delta y\lessapprox &  & |x_{2}|\Delta x_{1}+|x_{1}|\Delta x_{2} &  &  & \delta y & \lessapprox\frac{\Delta x_{1}}{|x_{1}|}+\frac{\Delta x_{2}}{|x_{2}|}\\
+\\\Delta z\lessapprox &  & \frac{1}{|x_{2}|}\Delta x_{1}+\frac{|x_{1}|}{|x_{2}^{2}|}\Delta x_{2} &  &  & \delta z & \lessapprox\frac{\Delta x_{1}}{|x_{1}|}+\frac{\Delta x_{2}}{|x_{2}|}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Representacion de numeros en una computadora
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\beta\in Nat,\beta>2$
+\end_inset
+
+,
+ todo numero real 
+\begin_inset Formula $r$
+\end_inset
+
+ se puede escribir de la forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\pm d_{n}d_{n-1}\dots d_{1}d_{0}.d_{-1}d_{-2}\dots)_{\beta}
+\]
+
+\end_inset
+
+donde cada 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ es un numero natural entre 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta-1$
+\end_inset
+
+.
+ el valor del numero 
+\begin_inset Formula $r$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\pm d_{n}\beta^{n}+d_{n-1}\beta^{n-1}+\dots+d_{0}\beta^{0}+d_{-1}\beta^{-1}+d_{-2}\beta^{-2}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Errores de redondeo en aritmetica de punto flotante
+\end_layout
+
+\begin_layout Standard
+Supongamos un sistema de punto flotante 
+\begin_inset Formula $(\beta,t,L,U)$
+\end_inset
+
+ que escribirmos un numero real 
+\begin_inset Formula $x$
+\end_inset
+
+ de la forma
+\begin_inset Formula 
+\[
+x=m\beta^{e}
+\]
+
+\end_inset
+
+con 
+\begin_inset Formula $1/\beta\le|m|\le1$
+\end_inset
+
+ y 
+\begin_inset Formula $L\le e\le U$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $fl(x)=x_{r}=m_{r}\beta^{e}$
+\end_inset
+
+,
+ donde 
+\begin_inset Formula $m_{r}$
+\end_inset
+
+ es la mantisa que se obtiene redondeando a 
+\begin_inset Formula $t$
+\end_inset
+
+ digitos la parte fraccionaria de 
+\begin_inset Formula $m$
+\end_inset
+
+,
+ luego tenemos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+|m_{r}-m| & \leq & \frac{1}{2}\beta^{-t}\\
+|m_{r}-m|\beta^{e} & \leq & \frac{1}{2}\beta^{-t}\beta^{e}\\
+|\beta^{e}m_{r}-\beta^{e}m| & \leq & \frac{1}{2}\beta^{-t}\beta^{e}
+\end{array}
+\]
+
+\end_inset
+
+Y por lo tanto obtenemos la cota del 
+\series bold
+error absoluto
+\series default
+ dado por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|x_{r}-x|\leq\frac{1}{2}\beta^{-t}\beta^{e}
+\]
+
+\end_inset
+
+Para el 
+\series bold
+error relativo
+\series default
+ tenemos
+\begin_inset Formula 
+\[
+\frac{|x_{r}-x|}{|x|}\leq\frac{\frac{1}{2}\beta^{-t}\beta^{e}}{|m|\beta^{e}}=\frac{\frac{1}{2}\beta^{-t}}{|m|}\leq\frac{1}{2}\beta^{1-t}
+\]
+
+\end_inset
+
+ pues 
+\begin_inset Formula $|m|\ge\frac{1}{\beta}$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\beta\geq\frac{1}{|m|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+Solucio de ecuaciones no lineales
+\end_layout
+
+\begin_layout Section
+Analisis de error en el metodo de Biseccion
+\end_layout
+
+\begin_layout Standard
+Si el algoritmo de biseccion se aplica a una funcion continua 
+\begin_inset Formula $f$
+\end_inset
+
+ en un intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+,
+ donde 
+\begin_inset Formula $f(a)f(b)<0$
+\end_inset
+
+,
+ entonces,
+ despues de 
+\begin_inset Formula $n$
+\end_inset
+
+ pasos se habra calcuado una raiz aproximada con un error a lo mas de 
+\begin_inset Formula $(b-a)/2^{n+1}$
+\end_inset
+
+.
+ (pag.
+ 82 Kincaid)
 \end_layout
 
 \end_body
