@@ -548,6 +548,158 @@ no es concluyente
 \end_layout
 
 \begin_layout Part
+Serie de Taylor
+\end_layout
+
+\begin_layout Section
+Serie de Taylor en terminos de 
+\begin_inset Formula $(x-c)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si la funcion de 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene derivadas continuas de ordenes 
+\begin_inset Formula $0,1,2,...,(n+1)$
+\end_inset
+
+ en un intervalo cerrado 
+\begin_inset Formula $I=[a,b]$
+\end_inset
+
+,
+ entonces para cualquier 
+\begin_inset Formula $c$
+\end_inset
+
+ y 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $I$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(x)=\sum_{k=0}^{n}\frac{f^{(k)}(c)(x-c)^{k}}{k!}+E_{(n+1)}
+\]
+
+\end_inset
+
+Donde 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+E_{(n+1)}
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ es el error y esta dado de la forma 
+\begin_inset Formula 
+\[
+E_{(n+1)}=\frac{f^{(n+1)}(\epsilon)(x-c)^{(n+1)}}{(n+1)!}
+\]
+
+\end_inset
+
+Aqui 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ es un punto que se encuentra entre 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Serie de Taylor en terminos de 
+\begin_inset Formula $(x+h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta forma se obtiene de reemplazar 
+\begin_inset Formula $x$
+\end_inset
+
+ por 
+\begin_inset Formula $x+h$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+ por 
+\begin_inset Formula $x$
+\end_inset
+
+ en la formula anterior,
+ entonces tenemos
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+f(x) & = & \sum_{k=0}^{n}\frac{f^{(k)}(x)((x+h)-x)^{k}}{k!}+E_{(n+1)}\\
+ & = & \sum_{k=0}^{n}\frac{f^{(k)}(x)(h)^{k}}{k!}+E_{(n+1)}
+\end{array}
+\]
+
+\end_inset
+
+Donde 
+\begin_inset Formula $E_{(n+1)}$
+\end_inset
+
+ esta dato entonces por 
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+E_{(n+1)} & = & \frac{f^{(n+1)}(\epsilon)((x+h)-x)^{(n+1)}}{(n+1)!}\\
+ & = & \frac{f^{(n+1)}(\epsilon)(h)^{(n+1)}}{(n+1)!}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
 Erorres
 \end_layout
 
