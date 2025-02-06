@@ -628,13 +628,13 @@ Donde
  es el error y esta dado de la forma 
 \begin_inset Formula 
 \[
-E_{(n+1)}=\frac{f^{(n+1)}(\epsilon)(x-c)^{(n+1)}}{(n+1)!}
+E_{(n+1)}=\frac{f^{(n+1)}(\xi)(x-c)^{(n+1)}}{(n+1)!}
 \]
 
 \end_inset
 
 Aqui 
-\begin_inset Formula $\epsilon$
+\begin_inset Formula $\xi$
 \end_inset
 
  es un punto que se encuentra entre 
@@ -693,14 +693,26 @@ Donde
 \begin_inset Formula 
 \[
 \begin{array}{ccc}
-E_{(n+1)} & = & \frac{f^{(n+1)}(\epsilon)((x+h)-x)^{(n+1)}}{(n+1)!}\\
- & = & \frac{f^{(n+1)}(\epsilon)(h)^{(n+1)}}{(n+1)!}
+E_{(n+1)} & = & \frac{f^{(n+1)}(\xi)((x+h)-x)^{(n+1)}}{(n+1)!}\\
+ & = & \frac{f^{(n+1)}(\xi)(h)^{(n+1)}}{(n+1)!}
 \end{array}
 \]
 
 \end_inset
 
+Aqui 
+\begin_inset Formula $\xi$
+\end_inset
 
+ es un punto que se encuentra entre 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Part
@@ -1068,8 +1080,9 @@ Sean
 \begin_inset Formula 
 \[
 \begin{array}{ccccccc}
-\Delta y\lessapprox &  & |x_{2}|\Delta x_{1}+|x_{1}|\Delta x_{2} &  &  & \delta y & \lessapprox\frac{\Delta x_{1}}{|x_{1}|}+\frac{\Delta x_{2}}{|x_{2}|}\\
-\\\Delta z\lessapprox &  & \frac{1}{|x_{2}|}\Delta x_{1}+\frac{|x_{1}|}{|x_{2}^{2}|}\Delta x_{2} &  &  & \delta z & \lessapprox\frac{\Delta x_{1}}{|x_{1}|}+\frac{\Delta x_{2}}{|x_{2}|}
+\Delta y\lessapprox & \, & |x_{2}|\Delta x_{1}+|x_{1}|\Delta x_{2} & \, & \, & \delta y & \lessapprox\frac{\Delta x_{1}}{|x_{1}|}+\frac{\Delta x_{2}}{|x_{2}|}\\
+\, & \, & \, & \, & \, & \, & \,\\
+\Delta z\lessapprox & \, & \frac{1}{|x_{2}|}\Delta x_{1}+\frac{|x_{1}|}{|x_{2}^{2}|}\Delta x_{2} & \, & \, & \delta z & \lessapprox\frac{\Delta x_{1}}{|x_{1}|}+\frac{\Delta x_{2}}{|x_{2}|}
 \end{array}
 \]
 
@@ -1234,7 +1247,11 @@ error relativo
 \end_layout
 
 \begin_layout Part
-Solucio de ecuaciones no lineales
+Solucion
+\end_layout
+
+\begin_layout Part
+de ecuaciones no lineales
 \end_layout
 
 \begin_layout Section
@@ -1270,5 +1287,370 @@ Si el algoritmo de biseccion se aplica a una funcion continua
  82 Kincaid)
 \end_layout
 
+\begin_layout Part
+Interpolacion polinomial
+\end_layout
+
+\begin_layout Section
+Forma de Newton del polinomio interpolante
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $n+1$
+\end_inset
+
+ puntos 
+\begin_inset Formula $x_{0},\dots x_{n}$
+\end_inset
+
+.
+ La forma de newton compacta para el polinomio interpolante resulta en 
+\begin_inset Formula 
+\[
+\sum_{i=0}^{n}c_{i}\prod_{j=0}^{i-1}(x-x_{j})
+\]
+
+\end_inset
+
+Si utilizamos diferencias divididas,
+ obtenemos
+\begin_inset Formula 
+\[
+\sum_{i=0}^{n}f[x_{0},\dots,x_{n}]\prod_{j=0}^{i-1}(x-x_{j})
+\]
+
+\end_inset
+
+ Donde la diferencia dividida esta definida sin importar la permutacion de sus argumentos,
+ luego
+\begin_inset Formula 
+\[
+f[x_{i},\dots,x_{n}]=\frac{f[x_{i+1},\dots,x_{j}]-f[x_{i},\dots,x_{j-1}]}{x_{j}-x_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Error de interpolacion
+\end_layout
+
+\begin_layout Standard
+(pag.
+ 156 Kinkaid) Si 
+\begin_inset Formula $p$
+\end_inset
+
+ es el polinomio de grado a los mas 
+\begin_inset Formula $n$
+\end_inset
+
+ que interpola a 
+\begin_inset Formula $f$
+\end_inset
+
+ en los 
+\begin_inset Formula $n+1$
+\end_inset
+
+ puntos 
+\begin_inset Formula $x_{0},\dots x_{n}$
+\end_inset
+
+ pertenecientes a el intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $f^{(n+1)}$
+\end_inset
+
+ es continua,
+ entonces para cada 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+ existe un 
+\begin_inset Formula $\xi\in(a,b)$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+f(x)-p(x)=\frac{1}{(n+1)!}f^{(n+1)}(\xi)\prod_{i=0}^{n}(x-x_{i})
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Part
+Splines
+\end_layout
+
+\begin_layout Section
+Spline lineal o de primer grado
+\end_layout
+
+\begin_layout Standard
+Dados los 
+\begin_inset Formula $n+1$
+\end_inset
+
+ nodos tales que 
+\begin_inset Formula $x_{0}<\dots<x_{n}$
+\end_inset
+
+,
+ un 
+\series bold
+spline lineal
+\series default
+ 
+\begin_inset Formula $(k=1)$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $S$
+\end_inset
+
+ definida en 
+\begin_inset Formula $[x_{0},x_{n}]$
+\end_inset
+
+ que satisface:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S$
+\end_inset
+
+ es un polinomio de grado 
+\begin_inset Formula $\le1$
+\end_inset
+
+ en cada subintervalo 
+\begin_inset Formula $[x_{i},x_{i+1})$
+\end_inset
+
+,
+ para 
+\begin_inset Formula $0\le i\le(n-1)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+La funcion 
+\begin_inset Formula $S$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[x_{0},x_{n}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es decir,
+ tiene la siguiente forma
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S(x)=\begin{cases}
+S_{0}(x)=a_{0}x+b_{0} & x\in[x_{0},x_{1})\\
+\vdots & \vdots\\
+S_{n-1}(x)=a_{n-1}x+b_{n-1} & x\in[x_{n-1},x_{n}\}
+\end{cases}
+\]
+
+\end_inset
+
+Donde 
+\begin_inset Formula 
+\[
+\begin{array}{c}
+a_{i}=\frac{f(x_{i+1})-f(x_{i})}{x_{i+1}-x_{i}}\\
+\,\\
+b_{i}=f(x_{i})-a_{i}x_{i}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Error:
+ El error de una spline lineal en un intervalo 
+\begin_inset Formula $[x_{i},x_{i+1}]$
+\end_inset
+
+ esta dado por
+\begin_inset Formula 
+\[
+|e(x)|=\frac{1}{8}f^{''}(\xi)|x_{i+1}-x_{i}|^{2}=\frac{M_{2}}{8}h^{2}
+\]
+
+\end_inset
+
+para un 
+\begin_inset Formula $\xi$
+\end_inset
+
+ entre 
+\begin_inset Formula $[x_{0},x_{n}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Spline Cubico
+\end_layout
+
+\begin_layout Standard
+Dados los 
+\begin_inset Formula $n+1$
+\end_inset
+
+ nodos tales que 
+\begin_inset Formula $x_{0}<\dots<x_{n}$
+\end_inset
+
+,
+ un 
+\series bold
+spline cubico 
+\begin_inset Formula $(k=3)$
+\end_inset
+
+
+\series default
+ es una funcion 
+\begin_inset Formula $S$
+\end_inset
+
+ definida en 
+\begin_inset Formula $[x_{0},x_{n}]$
+\end_inset
+
+ que satisface:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S$
+\end_inset
+
+ es un polinomio de grado 
+\begin_inset Formula $\le3$
+\end_inset
+
+ en cada subintervalo 
+\begin_inset Formula $[x_{i},x_{i+1})$
+\end_inset
+
+,
+ para 
+\begin_inset Formula $0\le i\le(n-1)$
+\end_inset
+
+.
+ 
+\backslash
+
+\end_layout
+
+\begin_layout Itemize
+Las funciones 
+\begin_inset Formula $S,S'$
+\end_inset
+
+ y 
+\begin_inset Formula $S''$
+\end_inset
+
+ son continuas en 
+\begin_inset Formula $[x_{0},x_{n}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir,
+ tiene la forma
+\begin_inset Formula 
+\[
+S(x)=\begin{cases}
+S_{0}(x)=a_{0}x^{3}+b_{0}x^{2}+c_{0}x+d_{0} & x\in[x_{0},x_{1})\\
+\vdots & \vdots\\
+S_{n-1}(x)=a_{n-1}x^{3}+b_{n-1}x^{2}+c_{n-1}x+d_{n-1} & x\in[x_{n-1},x_{n}\}
+\end{cases}
+\]
+
+\end_inset
+
+Donde las condiciones a cumplir son:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Condicion de interpolacion
+\series default
+ (todos los nudos)
+\begin_inset Formula 
+\[
+S(x_{i})=f(x_{i})\text{\,\,\,\,para\,\,\,}i=0,\dots,n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Condiciones de continuidad 
+\series default
+(solo nudos interiores)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{i}(x_{i+1})=S_{i+1}(x_{i+1})$
+\end_inset
+
+ para 
+\begin_inset Formula $i=0,\dots,n-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{i}^{'}(x_{i+1})=S_{i+1}^{'}(x_{i+1})$
+\end_inset
+
+ para 
+\begin_inset Formula $i=0,\dots,n-2$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
