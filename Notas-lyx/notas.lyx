@@ -1728,13 +1728,13 @@ Sea
 \begin_inset Formula $\{(x_{i},y_{i}):i=0,\dots,m-1\}$
 \end_inset
 
- un conjunto de puntos,
- llamados nodos,
- queremos obtener un 
+ un 
 \series bold
-polinomio
+conjunto de puntos
 \series default
- 
+,
+ llamados nodos,
+ queremos obtener un polinomio 
 \family roman
 \series medium
 \shape up
@@ -1845,7 +1845,11 @@ Sea
 \begin_inset Formula $f$
 \end_inset
 
- una funcion continua en un intervalo 
+ una 
+\series bold
+funcion
+\series default
+ continua en un intervalo 
 \begin_inset Formula $[a,b]$
 \end_inset
 
