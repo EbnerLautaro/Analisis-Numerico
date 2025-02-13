@@ -1994,8 +1994,7 @@ Conjunto Ortogonal de funciones
 \end_layout
 
 \begin_layout Definition*
-(pag.
- 382 Burden) El conjunto 
+El conjunto 
 \begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
 \end_inset
 
@@ -2064,8 +2063,7 @@ Si
 \begin_layout Theorem*
 
 \emph on
-(pag.
- 382 Burden) Si 
+Si 
 \begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
 \end_inset
 
@@ -2131,8 +2129,7 @@ a_{k}=\frac{\int_{a}^{b}\omega(x)f(x)\phi_{k}(x)\,dx}{\int_{a}^{b}\omega(x)(\phi
 \begin_layout Theorem*
 
 \emph on
-(pag.
- 383 Burden) El conjunto de funciones polinomiales 
+El conjunto de funciones polinomiales 
 \begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
 \end_inset
 
@@ -2183,17 +2180,11 @@ Integracion Numerica
 \end_layout
 
 \begin_layout Section
-La regla del trapecio
+La regla del trapecio simple
 \end_layout
 
 \begin_layout Standard
-La regla del trapecio simple,
- a veces denotada por 
-\begin_inset Formula $I_{T}(f;a,b)$
-\end_inset
-
-,
- para integracion numerica en el intervalo 
+La regla del trapecio simple para integracion numerica en el intervalo 
 \begin_inset Formula $[a,b]$
 \end_inset
 
@@ -2205,67 +2196,10 @@ La regla del trapecio simple,
 
 \end_inset
 
-y su correspondiente error esta dado por e
+y su correspondiente error esta dado por 
 \begin_inset Formula 
 \[
-E_{T}-\frac{(b-a)^{3}}{12}f''(\xi)
-\]
-
-\end_inset
-
-Normalmente se denota 
-\begin_inset Formula $h=b-a$
-\end_inset
-
-.
- (pag.
- 142 Burden)
-\end_layout
-
-\begin_layout Section
-Regla de Simpson 
-\end_layout
-
-\begin_layout Standard
-La regla de Simpson,
- a veces denotada por 
-\begin_inset Formula $I_{S}(f;a,b)$
-\end_inset
-
-,
- para integracion numerica en el intervalo 
-\begin_inset Formula $[a,b]$
-\end_inset
-
- necesita de 
-\begin_inset Formula $3$
-\end_inset
-
- puntos de interpolacion 
-\begin_inset Formula 
-\[
-x_{0}=a\qquad x_{1}=\frac{a+b}{2}\qquad x_{2}=b
-\]
-
-\end_inset
-
-Notar que si llamamos 
-\begin_inset Formula $h=\frac{b-a}{2}$
-\end_inset
-
-,
- luego 
-\begin_inset Formula 
-\[
-x_{1}=x_{0}+h\qquad x_{2}=x_{0}+2h
-\]
-
-\end_inset
-
-Luego la regla de interpolacion esta dada por
-\begin_inset Formula 
-\[
-\int_{a}^{b}f(x)\,dx\approx\frac{h}{3}[f(a)+4f(a+h)+f(a+2h)]
+-\frac{(b-a)^{3}}{12}f''
 \]
 
 \end_inset

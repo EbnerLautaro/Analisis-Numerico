@@ -38,7 +38,7 @@ theorems-ams
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize default
+\papersize a4
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
@@ -82,6 +82,7 @@ theorems-ams
 \papersides 1
 \paperpagestyle default
 \tablestyle default
+\bullet 1 0 9 -1
 \tracking_changes false
 \output_changes false
 \change_bars false
@@ -1288,6 +1289,42 @@ Interpolacion polinomial
 \end_layout
 
 \begin_layout Section
+Forma de Lagrange del polinomio interpolante
+\end_layout
+
+\begin_layout Standard
+Dados los 
+\begin_inset Formula $n+1$
+\end_inset
+
+ puntos 
+\begin_inset Formula $x_{0},\dots,x_{n}$
+\end_inset
+
+ definimos los 
+\series bold
+polinomios basicos de Lagrange
+\series default
+ como 
+\begin_inset Formula 
+\[
+l_{i}(x)=\prod_{j=0,\,j\ne i}^{n}\frac{x-x_{j}}{x_{i}-x_{j}}\qquad\text{para}\,i=0,\dots,n
+\]
+
+\end_inset
+
+Ahora definimos la forma de lagrange del polinomio interpolante por
+\begin_inset Formula 
+\[
+p(x)=\sum_{i=0}^{n}f(x_{i})\,l_{i}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Forma de Newton del polinomio interpolante
 \end_layout
 
@@ -1318,8 +1355,7 @@ Si utilizamos diferencias divididas,
 
 \end_inset
 
- Donde la diferencia dividida esta definida sin importar la permutacion de sus argumentos,
- luego
+ Donde la diferencia dividida esta definida sin importar la permutacion de sus argumentos por la siguiente expresion
 \begin_inset Formula 
 \[
 f[x_{i},\dots,x_{n}]=\frac{f[x_{i+1},\dots,x_{j}]-f[x_{i},\dots,x_{j-1}]}{x_{j}-x_{i}}
@@ -1331,7 +1367,7 @@ f[x_{i},\dots,x_{n}]=\frac{f[x_{i+1},\dots,x_{j}]-f[x_{i},\dots,x_{j-1}]}{x_{j}-
 \end_layout
 
 \begin_layout Section
-Error de interpolacion
+Error en el polinomio interpolante
 \end_layout
 
 \begin_layout Standard
@@ -1382,10 +1418,6 @@ f(x)-p(x)=\frac{1}{(n+1)!}f^{(n+1)}(\xi)\prod_{i=0}^{n}(x-x_{i})
 
 (pag.
  156 Kinkaid) 
-\end_layout
-
-\begin_layout Part
-Splines
 \end_layout
 
 \begin_layout Section
@@ -1691,7 +1723,7 @@ Condiciones normales
 \begin_inset Formula 
 \[
 \begin{array}{ccc}
-S^{''}(x_{0})=S_{0}^{''}(x_{0})=0 & \text{\qquad y\qquad} & S^{''}(x_{n})=S_{n-1}^{''}(x_{n})=0\end{array}
+S^{''}(x_{0})=S_{0}^{''}(x_{0})=0 & \text{\hfill y\hfill} & S^{''}(x_{n})=S_{n-1}^{''}(x_{n})=0\end{array}
 \]
 
 \end_inset
@@ -1706,7 +1738,7 @@ Condiciones correctas
 \begin_inset Formula 
 \[
 \begin{array}{ccc}
-S^{'}(x_{0})=S_{0}^{'}(x_{0})=f(x_{0}) & \text{\qquad y\qquad} & S^{'}(x_{n})=S_{n-1}^{'}(x_{n})=f(x_{n})\end{array}
+S^{'}(x_{0})=S_{0}^{'}(x_{0})=f(x_{0}) & \text{\hfill y\hfill} & S^{'}(x_{n})=S_{n-1}^{'}(x_{n})=f(x_{n})\end{array}
 \]
 
 \end_inset
@@ -1799,7 +1831,7 @@ Para minimizar
  nos quedan las ecuaciones normales
 \begin_inset Formula 
 \[
-\sum_{k=0}^{n}a_{k}\sum_{i=0}^{m}x^{j+k}=\sum_{i=0}^{m}x^{j}f(x)\qquad\text{para\,cada\,}j=0,\ensuremath{\dots},m
+\sum_{k=0}^{n}a_{k}\sum_{i=0}^{m}x^{j+k}=\sum_{i=0}^{m}x^{j}f(x)\hfill\text{para\,cada\,}j=0,\ensuremath{\dots},m
 \]
 
 \end_inset
@@ -1923,7 +1955,7 @@ El problema es encontrar los coeficientes reales
  Luego de resolver esto nos quedan las ecuaciones normales
 \begin_inset Formula 
 \[
-\sum_{k=0}^{n}a_{k}\int_{a}^{b}x^{j+k}dx=\int_{a}^{b}x^{j}f(x)\qquad\text{para\,cada\,}j=0,\ensuremath{\dots},n
+\sum_{k=0}^{n}a_{k}\int_{a}^{b}x^{j+k}dx=\int_{a}^{b}x^{j}f(x)\hfill\text{para\,cada\,}j=0,\ensuremath{\dots},n
 \]
 
 \end_inset
@@ -1955,6 +1987,298 @@ a_{n}
 
 (pag.
  378 Burden)
+\end_layout
+
+\begin_layout Section
+Conjunto Ortogonal de funciones
+\end_layout
+
+\begin_layout Definition*
+(pag.
+ 382 Burden) El conjunto 
+\begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
+\end_inset
+
+ es un conjunto 
+\series bold
+ortogonal de funciones
+\series default
+ en el intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+,
+ con respecto de la funcion de peso 
+\begin_inset Formula $\omega$
+\end_inset
+
+,
+ si se cumple
+\begin_inset Formula 
+\[
+\int_{a}^{b}\omega(x)\phi_{k}(x)\phi_{j}(x)\,dx=\begin{cases}
+0 & j\neq k\\
+\alpha_{j} & j=k
+\end{cases}
+\]
+
+\end_inset
+
+Particularmente si 
+\begin_inset Formula $\alpha_{j}=1$
+\end_inset
+
+ para todo 
+\begin_inset Formula $j=0,\dots,n$
+\end_inset
+
+ se dice que el conjunto es 
+\series bold
+ortonormal
+\series default
+.
+\end_layout
+
+\begin_layout Lemma*
+
+\emph on
+Si 
+\begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
+\end_inset
+
+ es un conjunto ortogonal de funciones en el intervalo 
+\begin_inset Formula $I$
+\end_inset
+
+ con respecto a una funcion de peso 
+\begin_inset Formula $\omega$
+\end_inset
+
+ definida en 
+\begin_inset Formula $I$
+\end_inset
+
+ entonces son linealmente independientes.
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+(pag.
+ 382 Burden) Si 
+\begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
+\end_inset
+
+ es un conjunto ortogonal
+\series bold
+ 
+\series default
+de funciones en un intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ con respecto a una funcion de peso 
+\begin_inset Formula $\omega$
+\end_inset
+
+ definida en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+,
+ entonces la aproximacion por cuadrados minimos a una funcion continua 
+\begin_inset Formula $f$
+\end_inset
+
+ respecto al peso 
+\begin_inset Formula $\omega$
+\end_inset
+
+ esta dada por 
+\begin_inset Formula 
+\[
+p(x)=\sum_{k}^{n}a_{k}\phi_{k}(x)
+\]
+
+\end_inset
+
+donde para cada 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ con 
+\begin_inset Formula $k=0,\dots,n$
+\end_inset
+
+ se cumple
+\begin_inset Formula 
+\[
+a_{k}=\frac{\int_{a}^{b}\omega(x)f(x)\phi_{k}(x)\,dx}{\int_{a}^{b}\omega(x)(\phi_{k}(x))^{2}\,dx}=\frac{1}{\alpha_{k}}\int_{a}^{b}\omega(x)f(x)\phi_{k}(x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+(pag.
+ 383 Burden) El conjunto de funciones polinomiales 
+\begin_inset Formula $\{\phi_{0},\phi_{1},\dots\phi_{n}\}$
+\end_inset
+
+ que se define a continuacion es un conjunto ortogonal en el intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ con respecto a una funcion de peso 
+\begin_inset Formula $\omega$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+\phi_{0}(x)=1 & \hfill & \phi_{1}(x)=x-B_{1} & \hfill & \text{para cada}\end{array}x\in[a,b]
+\]
+
+\end_inset
+
+y para 
+\begin_inset Formula $k\ge2$
+\end_inset
+
+ definimos
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+\phi_{k}(x)=(x-B_{k})\phi_{k-1}(x)-C_{k}\phi_{k-2}(x) & \hfill & \text{para cada }x\in[a,b]\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+B_{k}=\frac{\int_{a}^{b}x\omega(x)(\phi_{k-1}(x))^{2}\,dx}{\int_{a}^{b}\omega(x)(\phi_{k-1}(x))^{2}\,dx} & \hfill & C_{k}=\frac{\int_{a}^{b}x\omega(x)\phi_{k-1}(x)\phi_{k-2}(x)\,dx}{\int_{a}^{b}\omega(x)(\phi_{k-2}(x))^{2}\,dx}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Integracion Numerica
+\end_layout
+
+\begin_layout Section
+La regla del trapecio
+\end_layout
+
+\begin_layout Standard
+La regla del trapecio simple,
+ a veces denotada por 
+\begin_inset Formula $I_{T}(f;a,b)$
+\end_inset
+
+,
+ para integracion numerica en el intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx\frac{(b-a)}{2}[f(a)+f(b)]
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por
+\begin_inset Formula 
+\[
+E_{T}-\frac{(b-a)^{3}}{12}f''(\xi)
+\]
+
+\end_inset
+
+Normalmente se denota 
+\begin_inset Formula $h=b-a$
+\end_inset
+
+.
+ (pag.
+ 142 Burden)
+\end_layout
+
+\begin_layout Section
+Regla de Simpson 
+\end_layout
+
+\begin_layout Standard
+La regla de Simpson,
+ a veces denotada por 
+\begin_inset Formula $I_{S}(f;a,b)$
+\end_inset
+
+,
+ para integracion numerica en el intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ necesita de 
+\begin_inset Formula $3$
+\end_inset
+
+ puntos de interpolacion 
+\begin_inset Formula 
+\[
+x_{0}=a\qquad x_{1}=\frac{a+b}{2}\qquad x_{2}=b
+\]
+
+\end_inset
+
+Notar que si llamamos 
+\begin_inset Formula $h=\frac{b-a}{2}$
+\end_inset
+
+,
+ luego 
+\begin_inset Formula 
+\[
+x_{1}=x_{0}+h\qquad x_{2}=x_{0}+2h
+\]
+
+\end_inset
+
+Luego la regla de interpolacion esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx\frac{h}{3}[f(a)+4f(a+h)+f(a+2h)]
+\]
+
+\end_inset
+
+y su correspondiente error esta dada por
+\begin_inset Formula 
+\[
+E_{S}=-\frac{h^{5}}{90}f^{(4)}(\xi)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
