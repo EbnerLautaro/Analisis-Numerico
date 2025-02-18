@@ -2182,12 +2182,38 @@ B_{k}=\frac{\int_{a}^{b}x\omega(x)(\phi_{k-1}(x))^{2}\,dx}{\int_{a}^{b}\omega(x)
 Integracion Numerica
 \end_layout
 
+\begin_layout Definition*
+La 
+\series bold
+precision
+\series default
+ o 
+\series bold
+grado de exactitud 
+\series default
+de una formula o regla de cuadratura es el mayor entero no negativo 
+\begin_inset Formula $n$
+\end_inset
+
+ tal que la formula de integracion es exacta para 
+\begin_inset Formula $x^{k}$
+\end_inset
+
+,
+ para todo 
+\begin_inset Formula $k=0,\dots n$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
-La regla del trapecio
+La regla del Trapecio
 \end_layout
 
 \begin_layout Standard
-La regla del trapecio simple,
+La regla del trapecio simple (pag.
+ 142 Burden),
  a veces denotada por 
 \begin_inset Formula $I_{T}(f;a,b)$
 \end_inset
@@ -2205,10 +2231,10 @@ La regla del trapecio simple,
 
 \end_inset
 
-y su correspondiente error esta dado por e
+y su correspondiente error esta dado por
 \begin_inset Formula 
 \[
-E_{T}-\frac{(b-a)^{3}}{12}f''(\xi)
+E_{T}=-\frac{(b-a)^{3}}{12}f''(\xi)
 \]
 
 \end_inset
@@ -2218,16 +2244,16 @@ Normalmente se denota
 \end_inset
 
 .
- (pag.
- 142 Burden)
+ 
 \end_layout
 
 \begin_layout Section
-Regla de Simpson 
+Regla de Simpson
 \end_layout
 
 \begin_layout Standard
-La regla de Simpson,
+La regla de Simpson (pag.
+ 144 Burden),
  a veces denotada por 
 \begin_inset Formula $I_{S}(f;a,b)$
 \end_inset
@@ -2268,6 +2294,1043 @@ Luego la regla de interpolacion esta dada por
 \int_{a}^{b}f(x)\,dx\approx\frac{h}{3}[f(a)+4f(a+h)+f(a+2h)]
 \]
 
+\end_inset
+
+y su correspondiente error esta dado por
+\begin_inset Formula 
+\[
+E_{S}=-\frac{h^{5}}{90}f^{(4)}(\xi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla del Rectangulo
+\end_layout
+
+\begin_layout Standard
+La regla del rectangulo,
+ a veces denotada por 
+\begin_inset Formula $I_{R}(f;a,b)$
+\end_inset
+
+,
+ esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx f(a)(b-a)
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por
+\begin_inset Formula 
+\[
+E_{R}=\frac{(b-a)^{2}}{2}f'(\xi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla del punto medio
+\end_layout
+
+\begin_layout Standard
+La regla del punto medio,
+ a veces denotada por 
+\begin_inset Formula $I_{PM}(f;a,b)$
+\end_inset
+
+,
+ esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx f(\frac{a+b}{2})(b-a)
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por
+\begin_inset Formula 
+\[
+E_{PM}=\frac{(b-a)^{3}}{24}f''(\xi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Regla
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Puntos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Formula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Error
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Precision
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Rectangulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(a)(b-a)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{(b-a)^{2}}{2}f'(\xi)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Punto Medio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(\frac{a+b}{2})(b-a)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{(b-a)^{3}}{24}f''(\xi)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Trapecio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{(b-a)}{2}[f(a)+f(b)]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{(b-a)^{3}}{12}f''(\xi)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Simpson
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{h}{3}[f(a)+4f(a+h)+f(a+2h)]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{h^{5}}{90}f^{(4)}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla Compuesta del Trapecio
+\end_layout
+
+\begin_layout Standard
+(pag.
+ 154 Burden) Sea 
+\begin_inset Formula $f\in C^{2}[a,b]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ un numero entero positivo,
+ 
+\begin_inset Formula $h=(b-a)/n$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{j}=a+jh$
+\end_inset
+
+,
+ para cada 
+\begin_inset Formula $j=0,\dots,n$
+\end_inset
+
+.
+ Entonces existe 
+\begin_inset Formula $\mu\in(a,b)$
+\end_inset
+
+ tal que la regla compuesta del trapecio para 
+\begin_inset Formula $n$
+\end_inset
+
+ subintervalos esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx\frac{h}{2}[f(x_{0})+2\sum_{j=1}^{n-1}f(x_{j})+f(x_{n})]
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por 
+\begin_inset Formula 
+\[
+E_{T}(f)=-\frac{(b-a)}{12}h^{2}f''(\mu)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla Compuesta de Simpson
+\end_layout
+
+\begin_layout Standard
+(pag.
+ 152 Burden) Sea 
+\begin_inset Formula $f\in C^{4}[a,b]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ par,
+ 
+\begin_inset Formula $h=(b-a)/n$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{j}=a+jh$
+\end_inset
+
+ para cada 
+\begin_inset Formula $j=0,\dots,n$
+\end_inset
+
+.
+ Existe 
+\begin_inset Formula $\mu\in(a,b)$
+\end_inset
+
+ para los que la regla compuesta de simpson para 
+\begin_inset Formula $n$
+\end_inset
+
+ subintervalos esta dada por 
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx\frac{h}{3}[f(x_{0})+2\sum_{j=1}^{(n/2)-1}f(x_{2j})+4\sum_{j=1}^{n/2}f(x_{2j-1})+f(x_{n})]
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por
+\begin_inset Formula 
+\[
+E_{S}(f)=-\frac{(b-a)}{180}h^{4}f^{(4)}(\mu)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla Compuesta del Punto Medio
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f\in C^{2}[a,b]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ un numero entero positivo,
+ 
+\begin_inset Formula $h=(b-a)/(n+2)$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{j}=a+(j+1)h$
+\end_inset
+
+,
+ para cada 
+\begin_inset Formula $j=-1,0,\dots,n+1$
+\end_inset
+
+.
+ Entonces existe 
+\begin_inset Formula $\mu\in(a,b)$
+\end_inset
+
+ tal que la regla compuesta del punto medio para 
+\begin_inset Formula $n+2$
+\end_inset
+
+ subintervalos esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx2h\sum_{j=0}^{n/2}f(x_{2j})
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por
+\begin_inset Formula 
+\[
+E_{PM}(f)=\frac{(b-a)}{6}h^{2}f''(\mu)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla Compuesta del Rectangulo
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f\in C^{1}[a,b]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ un numero entero positivo,
+ 
+\begin_inset Formula $h=(b-a)/n$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{j}=a+jh$
+\end_inset
+
+,
+ para cada 
+\begin_inset Formula $j=0,\dots,n$
+\end_inset
+
+.
+ Entonces existe 
+\begin_inset Formula $\mu\in(a,b)$
+\end_inset
+
+ tal que la regla compuesta del rectangulo para 
+\begin_inset Formula $n$
+\end_inset
+
+ subintervalos esta dada por
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx h\sum_{j=0}^{n-1}f(x_{j})
+\]
+
+\end_inset
+
+y su correspondiente error esta dado por 
+\begin_inset Formula 
+\[
+E_{R}(f)=\frac{(b-a)}{2}hf'(\mu)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Regla
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Formula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Error
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Rectangulo
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h\sum_{j=0}^{n-1}f(x_{j})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{(b-a)}{2}hf'(\mu)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Punto Medio
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2h\sum_{j=0}^{n/2}f(x_{2j})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{(b-a)}{6}h^{2}f''(\mu)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Trapecio
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{h}{2}[f(x_{0})+2\sum_{j=1}^{n-1}f(x_{j})+f(x_{n})]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{(b-a)}{12}h^{2}f''(\mu)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Simpson
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{h}{3}[f(x_{0})+2\sum_{j=1}^{(n/2)-1}f(x_{2j})+4\sum_{j=1}^{n/2}f(x_{2j-1})+f(x_{n})]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{(b-a)}{180}h^{4}f^{(4)}(\mu)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Reglas gaussianas
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+Cuadratura gaussiana 
+\series default
+(pag.
+ 233 Kincaid) 
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+Sea 
+\begin_inset Formula $q$
+\end_inset
+
+ un polinomio no nulo de grado 
+\begin_inset Formula $n+1$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\int_{a}^{b}x^{k}q(x)\,dx=0\qquad(0\le k\le n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+Sean 
+\begin_inset Formula $x_{0},\dots,x_{n}$
+\end_inset
+
+ las raices de 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Entonces la formula 
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\,dx\approx\sum_{i=0}^{n}A_{i}f(x_{i})\qquad\text{donde}\qquad A_{i}=\int_{a}^{b}l_{i}(x)\,dx
+\]
+
+\end_inset
+
+con estas 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ como nodos,
+ la regla dada sera exacta para todo polinomio de grado a lo mas 
+\begin_inset Formula $2n+1$
+\end_inset
+
+.
+ Ademas,
+ los nodos se encuentran en el intervalo abierto 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+Cuadratura gaussiana pesada 
+\series default
+(pag.
+ 235 Kincaid)
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+Sea 
+\begin_inset Formula $q$
+\end_inset
+
+ un polinomio no nulo de grado 
+\begin_inset Formula $n+1$
+\end_inset
+
+ y sea tambien 
+\begin_inset Formula $\omega(x)$
+\end_inset
+
+ una funcion de peso positiva definida en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+\int_{a}^{b}x^{k}q(x)\omega(x)\,dx=0\qquad(0\le k\le n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+Sean 
+\begin_inset Formula $x_{0},\dots,x_{n}$
+\end_inset
+
+ las raices de 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Entonces la formula 
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\omega(x)\,dx\approx\sum_{i=0}^{n}A_{i}f(x_{i})\qquad\text{donde}\qquad A_{i}=\int_{a}^{b}l_{i}(x)\omega(x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+Sera exacta siempre que 
+\begin_inset Formula $f$
+\end_inset
+
+ sea un polinomio de grado a lo mas 
+\begin_inset Formula $2n+1$
 \end_inset
 
 
