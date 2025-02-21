@@ -8,6 +8,7 @@
 \use_default_options true
 \begin_modules
 theorems-ams
+customHeadersFooters
 \end_modules
 \maintain_unincluded_children no
 \language american
@@ -124,6 +125,22 @@ theorems-ams
 \begin_inset FormulaMacro
 \newcommand{\N}{\mathds{N}}
 {\mathds{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Repositorio con mas material:
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+github.com/EbnerLautaro/Analisis-Numerico
+\end_layout
+
 \end_inset
 
 
@@ -2532,7 +2549,7 @@ Punto Medio
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $f(\frac{a+b}{2})(b-a)$
+\begin_inset Formula $f(h)(b-a)$
 \end_inset
 
 
@@ -2596,7 +2613,7 @@ Trapecio
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\frac{(b-a)}{2}[f(a)+f(b)]$
+\begin_inset Formula $h[f(a)+f(b)]$
 \end_inset
 
 
@@ -3437,5 +3454,80 @@ Si
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Extra
+\end_layout
+
+\begin_layout Standard
+No resumi lo que sigue porque es casi imposible de resumir y es una bocha de latex,
+ no tenia ganas.
+ Los proximos videos son 
+\series bold
+oro
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Programacion lineal
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Metodo grafico
+\series default
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://youtu.be/f-RtLqQGaiM?si=rzCgduRoVt4JShSA
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Resolucion Sistemas Lineales
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Factorizacion LU
+\series default
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://youtu.be/AbOH3Qoxb1A?si=ZYJ8LoBCPyAlORNg
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

@@ -2532,7 +2532,7 @@ Punto Medio
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $f(\frac{a+b}{2})(b-a)$
+\begin_inset Formula $f(h)(b-a)$
 \end_inset
 
 
@@ -2596,7 +2596,7 @@ Trapecio
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\frac{(b-a)}{2}[f(a)+f(b)]$
+\begin_inset Formula $h[f(a)+f(b)]$
 \end_inset
 
 
