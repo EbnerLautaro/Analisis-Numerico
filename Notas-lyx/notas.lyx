@@ -138,7 +138,7 @@ status open
 
 \begin_layout Plain Layout
 
-github.com/EbnerLautaro/Analisis-Numerico
+https://github.com/EbnerLautaro/Analisis-Numerico
 \end_layout
 
 \end_inset
@@ -565,6 +565,13 @@ no es concluyente
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 Serie de Taylor
 \end_layout
@@ -731,6 +738,13 @@ Aqui
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
@@ -1109,6 +1123,13 @@ Sean
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 Representacion de numeros en una computadora
 \end_layout
@@ -1252,7 +1273,11 @@ error relativo
 
 \end_inset
 
- pues 
+
+\end_layout
+
+\begin_layout Standard
+pues 
 \begin_inset Formula $|m|\ge\frac{1}{\beta}$
 \end_inset
 
@@ -1262,6 +1287,13 @@ error relativo
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
@@ -1299,6 +1331,13 @@ Si el algoritmo de biseccion se aplica a una funcion continua
 .
  (pag.
  82 Kincaid)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
@@ -1763,6 +1802,13 @@ S^{'}(x_{0})=S_{0}^{'}(x_{0})=f(x_{0}) & \text{\hfill y\hfill} & S^{'}(x_{n})=S_
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Part
 Aproximacion de funciones
@@ -2190,6 +2236,13 @@ donde
 B_{k}=\frac{\int_{a}^{b}x\omega(x)(\phi_{k-1}(x))^{2}\,dx}{\int_{a}^{b}\omega(x)(\phi_{k-1}(x))^{2}\,dx} & \hfill & C_{k}=\frac{\int_{a}^{b}x\omega(x)\phi_{k-1}(x)\phi_{k-2}(x)\,dx}{\int_{a}^{b}\omega(x)(\phi_{k-2}(x))^{2}\,dx}\end{array}
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3455,7 +3508,7 @@ Si
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3494,6 +3547,25 @@ status open
 \begin_layout Plain Layout
 
 https://youtu.be/f-RtLqQGaiM?si=rzCgduRoVt4JShSA
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Metodo simplex
+\series default
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.youtube.com/watch?v=9OIbDjorz6c&ab_channel=IngeChayClases
 \end_layout
 
 \end_inset
