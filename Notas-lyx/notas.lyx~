@@ -3555,7 +3555,11 @@ https://youtu.be/f-RtLqQGaiM?si=rzCgduRoVt4JShSA
 \end_layout
 
 \begin_layout Itemize
-Metodo simplex (
+
+\series bold
+Metodo simplex
+\series default
+ (
 \begin_inset Flex URL
 status open
 
